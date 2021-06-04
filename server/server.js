@@ -3,6 +3,7 @@ const path = require("path");
 let app = express();
 const dataBase = require('./services/dataBase');
 const movies_servers = require('./services/movies.service');
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -81,4 +82,4 @@ app.delete("/cart/:id/:movieId", function(req,res){
     
 
 
-app.listen(process.env.PORT || 8080);
+app.listen(PORT);
